@@ -1,12 +1,10 @@
-import './App.css';
-import Message from './Message';
+import Header from "./components/Header";
+import "./App.css";
 
 function App() {
-  const name = "Ben"
-  
   return (
-    <div className="App">
-      <Message name= {19 + " " + name} />
+    <div>
+      <Header />
     </div>
   );
 }
