@@ -1,34 +1,11 @@
-import './header.css'
 
 function Header(props) {
     return (
-        <div>
-            <h1>
-                Hello, World!
-            </h1>
-                
-                
-            {/* Shit on the left */}
-
-                {/* Home & About */}
-
-
-
-
-            {/* Shit in the middle */}
-
-                {/* Logo */}
-
-
-
-
-            {/* Lotsa shit on the right */}
-            
-                
-
-
-
-        </div>
+        <nav className= "bg-red-400">
+            <div className="max-w-7xl mx-auto border border-red-400 bg-gray-500">
+                hello
+            </div>
+        </nav>
     )
 }
 
