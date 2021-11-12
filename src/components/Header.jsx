@@ -3,10 +3,10 @@ import logo from '../assets/NFM-Logo.png'
 
 function Header(props) {
     return (
-        <nav className="bg-black flex py-3 justify-between">            
+        <nav className="bg-black flex py-3 justify-between sticky top-0">            
         
         {/* left side  */}
-          <div className=" "> 
+          <div> 
                 <div className="  inline-grid" >
                     <h1 className="text-white ml-3 mt-10">Home</h1>
                 </div>
