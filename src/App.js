@@ -15,7 +15,17 @@ function App() {
       <div>
         <Header />
         <Switch>
-          <Route path="/" exact component={MainBody} />
+          {/* <Route path="/" exact component={MainBody} /> */}
+          <Route
+            path="/"
+            exact
+            render={(props) => (
+              <>
+                <MainBody />
+                <Instagram />
+              </>
+            )}
+          />
           <Route path="/staff" component={Staff} />
           <Route path="/about" component={History} />
         </Switch>
