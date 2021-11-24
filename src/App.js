@@ -8,6 +8,11 @@ import Instagram from "./components/Instagram";
 import Staff from "./components/Staff";
 import History from "./components/History";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import { library } from "@fortawesome/fontawesome-svg-core";
+
+library.add(fab);
 
 function App() {
   return (
@@ -22,7 +27,7 @@ function App() {
             render={(props) => (
               <>
                 <MainBody />
-                <Instagram />
+                {/* <Instagram /> */}
               </>
             )}
           />

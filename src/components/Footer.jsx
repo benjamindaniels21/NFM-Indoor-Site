@@ -1,8 +1,15 @@
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Footer(props) {
     return (
-        <div className="bg-green-500 h-20">
-            <h1 className="text-white bg-green-500">The Footer</h1>
+        <div className="h-20 justify-around text-center">
+            <div>
+                <h1 className="text-white mt-2">&copy; 2021 NFM Indoor Percussion</h1>
+                <a href="#"><FontAwesomeIcon className="text-white inline-block text-3xl m-2 " icon={['fab', 'facebook']} /></a>
+                <a href="https://www.instagram.com/nfmhspercussion/"><FontAwesomeIcon className="text-white inline-block text-3xl m-2" icon={['fab', 'instagram']} /></a>
+                <a href="#"><FontAwesomeIcon className="text-white inline-block text-3xl m-2" icon={['fab', 'twitter']} /></a>
+            </div>
         </div>
     )
 }
