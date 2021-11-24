@@ -1,14 +1,16 @@
-import {StaffImages} from "./staffImages";
+import {SliderData} from "./SliderData";
 
-function Staff() {
+const Staff = () => {
     return (
-        <div>
-            <h1 className="text-white">Staff Images</h1>
-        {StaffImages.map((staff, index) => {
-            return <img src={staff.image} alt={staff.name} />
-        })}            
-        </div>
+        <>
+        <h1 className="text-white">Staff</h1>
+         {SliderData.map((slide, index) => {
+            return <img src={slide.image} alt="name" />;
+        })}             
+        </>
     );
 };
 
-export default Staff
+export default Staff;
+
+
