@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+
 function Footer(props) {
     return (
         <div className="h-20 justify-around text-center">
@@ -9,6 +10,7 @@ function Footer(props) {
                 <a href="#"><FontAwesomeIcon className="text-white inline-block text-3xl m-2 " icon={['fab', 'facebook']} /></a>
                 <a href="https://www.instagram.com/nfmhspercussion/"><FontAwesomeIcon className="text-white inline-block text-3xl m-2" icon={['fab', 'instagram']} /></a>
                 <a href="#"><FontAwesomeIcon className="text-white inline-block text-3xl m-2" icon={['fab', 'twitter']} /></a>
+                
             </div>
         </div>
     )
