@@ -19,8 +19,20 @@ export const SliderData = [
   },
   {
     id: 3,
-    image: "",
+    image: "./photos/Rob.jpg",
     name: "Rob Law",
+    bio: "",
+  },
+  {
+    id: 4,
+    image: "./photos/Carlos.jpg",
+    name: "Carlos Martinez",
+    bio: "",
+  },
+  {
+    id: 5,
+    image: "./photos/Elly.jpg",
+    name: "Elly Hutson",
     bio: "",
   },
 ];
