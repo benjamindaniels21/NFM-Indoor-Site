@@ -8,7 +8,7 @@ const Staff = () => {
 
             {SliderData.map((slide) => {
                 return (
-                    <div class="flex flex-wrap max-w-sm rounded overflow-hidden shadow-lg bg-white mb-2">
+                    <div class="flex-wrap max-w-sm rounded overflow-hidden shadow-lg bg-white m-2 inline-block">
                         <img class="w-full h-auto" src={slide.image} alt="Sunset in the mountains" />
                         <div class="px-6 py-4 bg-white">
                             <div class="font-bold text-xl mb-2 bg-white">{slide.name}</div>
