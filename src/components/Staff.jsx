@@ -1,4 +1,5 @@
 import {SliderData} from "./SliderData";
+import "./hr.css";
 
 const Staff = () => {
 
@@ -8,12 +9,13 @@ const Staff = () => {
 
             {SliderData.map((slide) => {
                 return (
-                    <div class="flex-wrap max-w-sm rounded overflow-hidden shadow-lg bg-white m-2 inline-block">
+                    <div class="flex-wrap max-w-sm rounded overflow-hidden  shadow-inner-lg bg-white m-2 inline-block">
                         <img class="w-full h-auto" src={slide.image} alt="Sunset in the mountains" />
                         <div class="px-6 py-4 bg-white">
                             <div class="font-bold text-xl mb-2 bg-white">{slide.name}</div>
+                                <hr className="hr-black"/>
                                 <p class="text-gray-700 text-base bg-white">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+                                        {slide.role}
                                 </p>
                         </div>
                     </div>
