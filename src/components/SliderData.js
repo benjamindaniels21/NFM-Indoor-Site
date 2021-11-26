@@ -55,4 +55,11 @@ export const SliderData = [
     bio: "",
     role: "Quad Tech",
   },
+  {
+    id: 8,
+    image: "./photos/Kristen.jpg",
+    name: "Kristen Doohan",
+    bio: "",
+    role: "Visual Tech",
+  },
 ];
