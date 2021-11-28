@@ -8,10 +8,10 @@ function Header(props) {
         {/* left side  */}
           <div> 
                 <div className="  inline-grid" >
-                    <h1 className="text-white ml-7 mt-10">Home</h1>
+                    <h1 className="cursor-pointer hover:text-red-500 text-white ml-7 mt-10">Home</h1>
                 </div>
                 <div className=" inline-grid justify-center ml-7" >
-                    <h1 className="text-white ">Staff</h1>
+                    <h1 className="text-white cursor-pointer hover:text-red-500 ">Staff</h1>
                 </div>
             </div>
         {/* middle  */}
@@ -22,10 +22,10 @@ function Header(props) {
         {/* right side  */}
               <div className=" "> 
                 <div className="  inline-grid justify-center mr-7 mt-10" >
-                    <h1 className="text-white">Contact</h1>
+                    <h1 className="text-white cursor-pointer hover:text-red-500">Contact</h1>
                 </div>
                 <div className=" inline-grid justify-center mr-7 " >
-                    <h1 className="text-white ">About</h1>
+                    <h1 className="text-white cursor-pointer hover:text-red-500">About</h1>
                 </div>
                 
             </div>
