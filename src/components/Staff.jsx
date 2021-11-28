@@ -5,7 +5,7 @@ const Staff = () => {
 
     return(
         <div className="items-center text-center">   
-            <h1 className="text-white text-5xl text-center mb-4">Our Instructional Staff</h1>
+            <h1 className="text-white text-5xl text-center mb-4 font-serif">Our Instructional Staff</h1>
 
             {SliderData.map((slide) => {
                 return (

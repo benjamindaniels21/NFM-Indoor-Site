@@ -10,12 +10,12 @@ function Header(props) {
           <div> 
                 <div className="  inline-grid" >
                     <Link to="/">
-                    <h1 className="cursor-pointer hover:text-red-500 text-white ml-7 mt-10">Home</h1>
+                    <h1 className="cursor-pointer hover:text-red-500 text-white ml-7 mt-10 text-xl font-serif">Home</h1>
                     </Link>
                 </div>
                 <div className=" inline-grid justify-center ml-7" >
                     <Link to="/staff">
-                    <h1 className="text-white cursor-pointer hover:text-red-500 ">Staff</h1>
+                    <h1 className="text-white cursor-pointer hover:text-red-500 text-xl font-serif">Staff</h1>
                     </Link>
                 </div>
             </div>
@@ -30,12 +30,12 @@ function Header(props) {
               <div className=" "> 
                 <div className="  inline-grid justify-center mr-7 mt-10" >
                     <Link to="/contact">
-                    <h1 className="text-white cursor-pointer hover:text-red-500">Contact</h1>
+                    <h1 className="text-white cursor-pointer hover:text-red-500 text-xl font-serif">Contact</h1>
                     </Link>               
                 </div>
                 <div className=" inline-grid justify-center mr-7 " >
                     <Link to="/about">
-                    <h1 className="text-white cursor-pointer hover:text-red-500">About</h1>
+                    <h1 className="text-white cursor-pointer hover:text-red-500 text-xl font-serif">About</h1>
                     </Link>
                 </div>
                 
