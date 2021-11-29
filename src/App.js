@@ -6,6 +6,7 @@ import MainBody from "./components/MainBody";
 import Footer from "./components/Footer";
 import Instagram from "./components/Instagram";
 import Staff from "./components/Staff";
+import Contact from "./components/Contact";
 import History from "./components/History";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -33,6 +34,7 @@ function App() {
           />
           <Route path="/staff" component={Staff} />
           <Route path="/about" component={History} />
+          <Route path="/contact" component={Contact} />
         </Switch>
         <Footer />
       </div>
