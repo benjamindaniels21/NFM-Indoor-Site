@@ -22,7 +22,7 @@ function Header(props) {
         {/* middle  */}
             <div className="inline-grid w-20 h-20 cursor-pointer  ">
                 <Link to="/">
-                <img src={logo} alt="NFM Indoor Percussion"/>
+                <img className="transform hover:scale-105 duration-200" src={logo} alt="NFM Indoor Percussion"/>
                 </Link>
            </div>
 
