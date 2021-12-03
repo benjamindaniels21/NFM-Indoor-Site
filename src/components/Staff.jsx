@@ -7,26 +7,25 @@ import ReactModal from 'react-modal';
 
 const Staff = (props) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  let staffName;
     return(
  
         <div className="items-center text-center">  
         
             <h1 className="text-white text-5xl text-center mb-4 font-serif">{props.name}</h1>
 
-            <ReactModal isOpen={modalIsOpen}>
-                <div className="bg-white">
-                <h1>{props.name}</h1>
-                <p>Modal Content</p>
-                <div>
-                    <button onClick={() => setModalIsOpen(false)} className="bg-green-400 p-2">Close Modal</button>
-                </div>
-                </div>
-            </ReactModal>  
+          
             {SliderData.map((slide) => {
                 return (
                     
                     <div  class="card transform transition duration-500 ease-in-out hover:scale-105 cursor-pointer flex-wrap max-w-sm rounded overflow-hidden  shadow-inner-lg bg-white m-2 inline-block">
-                    <button className='bg-green-400' onClick={() => setModalIsOpen(true)}>Click Me</button>
+                    <button className='bg-green-400' 
+                        onClick={() => {
+                        setModalIsOpen(true);
+                        console.log("Yo this is " + slide.name);
+                        staffName = slide.name;
+                            }   
+                            }>Click Me</button>
 
                         <img class="w-full h-auto" src={slide.image} alt="Sunset in the mountains" />
                         <div class="px-6 py-4 bg-white">
@@ -36,12 +35,16 @@ const Staff = (props) => {
                                         {slide.role}
 
                                 </p>
-                        </div>
+                            </div>
                         
-                    </div>
+                        </div>
                     
                 );
             })}
+
+            return (
+                  
+            )
         </div> 
     );
 
@@ -52,3 +55,16 @@ export default Staff;
 
 
 // onClick={() => setModalIsOpen(true)}
+
+
+//Modal Below
+
+{/* <ReactModal isOpen={modalIsOpen}>
+    <div className="bg-white">
+    <h1>{staffName}</h1>
+    <p>{staffName}</p>
+    <div>
+        <button onClick={() => setModalIsOpen(false)} className="bg-green-400 p-2">Close Modal</button>
+    </div>
+    </div>
+</ReactModal>  */}
