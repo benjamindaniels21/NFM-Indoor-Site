@@ -1,4 +1,5 @@
-
+//This is a login form now and needs to be changed to something that 
+//allows for comments or has a comment field. 
 
 function Contact() {
     return (
