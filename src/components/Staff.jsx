@@ -41,10 +41,6 @@ const Staff = (props) => {
                     
                 );
             })}
-
-            return (
-                  
-            )
         </div> 
     );
 
