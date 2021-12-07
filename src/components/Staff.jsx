@@ -1,23 +1,25 @@
 import {SliderData} from "./SliderData";
 import "./hr.css";
 import React, {useState} from 'react';
-import Modal from 'react-modal';
+import ReactModal from 'react-modal';
 
 
 
-const Staff = (props) => {
- 
+const Staff = (slide) => {
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+
+
     return(
  
         <div className="items-center text-center">  
         
-            <h1 className="text-white text-5xl text-center mb-4 font-serif">{props.name}</h1>
+            <h1 className="text-white text-5xl text-center mb-4 font-serif">{slide.name}</h1>
 
           
             {SliderData.map((slide) => {
                 return (
                     
-                    <div class="card transform transition duration-500 ease-in-out hover:scale-105 cursor-pointer flex-wrap max-w-sm rounded overflow-hidden  shadow-inner-lg bg-white m-2 inline-block">
+                    <div onClick={() => setModalIsOpen(true)} class="card transform transition duration-500 ease-in-out hover:scale-105 cursor-pointer flex-wrap max-w-sm rounded overflow-hidden  shadow-inner-lg bg-white m-2 inline-block">
 
                         <img class="w-full h-auto" src={slide.image} alt="Staff member" />
                         <div class="px-6 py-4 bg-white">
@@ -27,13 +29,24 @@ const Staff = (props) => {
                                         {slide.role}
 
                                 </p>
-                            </div>
-                        
                         </div>
+
+                        
+
+                    </div>
                     
+
                 );
             })}
-            
+            <ReactModal isOpen={modalIsOpen}>
+                            <div className="bg-white">
+                            <h1>{slide.name}</h1>
+                            <p>yo-yo</p>
+                            <div>
+                                <button onClick={() => setModalIsOpen(false)} className="bg-green-400 p-2">Close Modal</button>
+                            </div>
+                            </div>
+                        </ReactModal>
         </div> 
 
     );
