@@ -1,13 +1,12 @@
 import {SliderData} from "./SliderData";
 import "./hr.css";
 import React, {useState} from 'react';
-import ReactModal from 'react-modal';
+import Modal from 'react-modal';
 
 
 
 const Staff = (props) => {
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-  let staffName;
+ 
     return(
  
         <div className="items-center text-center">  
@@ -18,16 +17,9 @@ const Staff = (props) => {
             {SliderData.map((slide) => {
                 return (
                     
-                    <div  class="card transform transition duration-500 ease-in-out hover:scale-105 cursor-pointer flex-wrap max-w-sm rounded overflow-hidden  shadow-inner-lg bg-white m-2 inline-block">
-                    <button className='bg-green-400' 
-                        onClick={() => {
-                        setModalIsOpen(true);
-                        console.log("Yo this is " + slide.name);
-                        staffName = slide.name;
-                            }   
-                            }>Click Me</button>
+                    <div class="card transform transition duration-500 ease-in-out hover:scale-105 cursor-pointer flex-wrap max-w-sm rounded overflow-hidden  shadow-inner-lg bg-white m-2 inline-block">
 
-                        <img class="w-full h-auto" src={slide.image} alt="Sunset in the mountains" />
+                        <img class="w-full h-auto" src={slide.image} alt="Staff member" />
                         <div class="px-6 py-4 bg-white">
                             <div class="font-bold text-xl mb-2 bg-white">{slide.name}</div>
                                 <hr className="hr-black"/>
@@ -41,14 +33,20 @@ const Staff = (props) => {
                     
                 );
             })}
+            
         </div> 
-    );
 
+    );
+    
+  
 }; 
 
 export default Staff;
 
-
+//  const [modalIsOpen, setModalIsOpen] = useState(false);
+//    function openModal() {
+//     setModalIsOpen(true);
+//   }
 
 // onClick={() => setModalIsOpen(true)}
 
