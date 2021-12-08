@@ -8,7 +8,16 @@ import {SliderData} from "./SliderData";
 function Card({ name, role, bio, image }) {
 
   const [modalIsOpen, setModalIsOpen] = useState(false);
-
+//   const customStyles = {
+//   content: {
+//     top: '50%',
+//     left: '50%',
+//     right: 'auto',
+//     bottom: 'auto',
+//     marginRight: '-50%',
+//     transform: 'translate(-50%, -50%)',
+//   },
+// };  
   return (
     <div className="justify-center transform transition duration-500 ease-in-out hover:scale-105 cursor-pointer flex-wrap max-w-sm rounded overflow-hidden m-4 items-center bg-white inline-block">
       <div onClick={() => setModalIsOpen(true)}>
@@ -20,12 +29,15 @@ function Card({ name, role, bio, image }) {
                         </div>
       </div>
       <ReactModal isOpen={modalIsOpen}>
-        <div className="bg-white">
-          <h1>{name}</h1>
-          <p>{bio}</p>
-        <div>
-          <button onClick={() => setModalIsOpen(false)} className="bg-green-400 p-2">Close Modal</button>
-        </div>
+        <div className="bg-white ">
+            <h1 className="text-center font-bold mb-2">{name}</h1>
+            <div className="inline-block">
+                <img className="rounded-full md:float-left md:mr-5 m-auto " src={image} alt={name} width="400" />
+                <p className="ml-8">{bio}</p>
+            </div>
+            <div className="m-auto text-center">
+                <button onClick={() => setModalIsOpen(false)} className="bg-red-400 p-2 m-auto mt-5">Close</button>
+            </div>
         </div>
     </ReactModal> 
     </div>
