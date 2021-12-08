@@ -1,78 +1,70 @@
-import {SliderData} from "./SliderData";
-import "./hr.css";
-import React, {useState} from 'react';
+import React, {useState} from 'react'
 import ReactModal from 'react-modal';
+import {SliderData} from "./SliderData";
+
+// import "./card.css";
+
+//Card + Modal and all data associated with it
+function Card({ name, role, bio, image }) {
+
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+//   const customStyles = {
+//   content: {
+//     top: '50%',
+//     left: '50%',
+//     right: 'auto',
+//     bottom: 'auto',
+//     marginRight: '-50%',
+//     transform: 'translate(-50%, -50%)',
+//   },
+// };  
+  return (
+    <div className="justify-center transform transition duration-500 ease-in-out hover:scale-105 cursor-pointer flex-wrap max-w-sm rounded overflow-hidden m-4 items-center bg-white inline-block">
+      <div onClick={() => setModalIsOpen(true)}>
+      <img className="max-w-sm" src={image} alt="Staff member" />
+                        <div class="px-6 py-4 bg-white">
+                            <div class="font-bold text-xl mb-2 mx-auto bg-white text-center">{name}</div>
+                                <hr className="hr-black"/>
+                                <p class="text-gray-700 text-base bg-white text-center">{role}</p>
+                        </div>
+      </div>
+      <ReactModal isOpen={modalIsOpen}>
+        <div className="bg-white ">
+            <h1 className="text-center font-bold mb-2">{name}</h1>
+            <div className="inline-block">
+                <img className="rounded-full md:float-left md:mr-5 m-auto " src={image} alt={name} width="400" />
+                <p className="ml-8">{bio}</p>
+            </div>
+            <div className="m-auto text-center">
+                <button onClick={() => setModalIsOpen(false)} className="bg-red-400 p-2 m-auto mt-5">Close</button>
+            </div>
+        </div>
+    </ReactModal> 
+    </div>
+  );
+}
 
 
 
+//Our main Export Rendering each card 
 
 const Staff = (props) => {
-    const [modalIsOpen, setModalIsOpen] = useState(false);
-
-
+    
     return(
- 
-        <div className="items-center text-center">  
-        
-            {/* <h1 className="text-white text-5xl text-center mb-4 font-serif">{props.name}</h1> */}
-
-          
-            {SliderData.map((slide) => {
+        <div className="items-center text-center">
+              {SliderData.map((slide) => {
                 return (
                     
-                    <div onClick={() => setModalIsOpen(true)} class="card transform transition duration-500 ease-in-out hover:scale-105 cursor-pointer flex-wrap max-w-sm rounded overflow-hidden  shadow-inner-lg bg-white m-2 inline-block">
-
-                        <img class="w-full h-auto" src={slide.image} alt="Staff member" />
-                        <div class="px-6 py-4 bg-white">
-                            <div class="font-bold text-xl mb-2 bg-white">{slide.name}</div>
-                                <hr className="hr-black"/>
-                                <p class="text-gray-700 text-base bg-white">
-                                        {slide.role}
-
-                                </p>
-                        </div>
-
-                        
-
-                    </div>
+                    <Card image={slide.image} name={slide.name} role={slide.role} bio={slide.bio}/>
                     
 
                 );
             })}
-            <ReactModal isOpen={modalIsOpen}>
-                            <div className="bg-white">
-                                <h1>{props.name}</h1>
-                                <p>{props.name}</p>
-                                <div>
-                                    <button onClick={() => setModalIsOpen(false)} className="bg-green-400 p-2">Close Modal</button>
-                                </div>
-                            </div>
-                        </ReactModal>
-        </div> 
-
+        </div>
     );
-    
-  
-}; 
+}
 
-export default Staff;
-
-//  const [modalIsOpen, setModalIsOpen] = useState(false);
-//    function openModal() {
-//     setModalIsOpen(true);
-//   }
-
-// onClick={() => setModalIsOpen(true)}
+export default Staff
 
 
-//Modal Below
-
-{/* <ReactModal isOpen={modalIsOpen}>
-    <div className="bg-white">
-    <h1>{staffName}</h1>
-    <p>{staffName}</p>
-    <div>
-        <button onClick={() => setModalIsOpen(false)} className="bg-green-400 p-2">Close Modal</button>
-    </div>
-    </div>
-</ReactModal>  */}
+// className="card justify-center transform transition duration-500 ease-in-out hover:scale-105 cursor-pointer flex-wrap max-w-sm rounded overflow-hidden ml-4 bg-white inline-block"
