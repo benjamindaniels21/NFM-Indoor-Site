@@ -12,6 +12,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
+import StaffHardCoded from "./components/StaffHardCoded";
 
 library.add(fab);
 
@@ -32,7 +33,7 @@ function App() {
               </>
             )}
           />
-          <Route path="/staff" component={Staff} />
+          <Route path="/staff" component={StaffHardCoded} />
           <Route path="/about" component={History} />
           <Route path="/contact" component={Contact} />
         </Switch>

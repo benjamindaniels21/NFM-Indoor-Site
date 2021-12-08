@@ -5,7 +5,8 @@ import ReactModal from 'react-modal';
 
 
 
-const Staff = (slide) => {
+
+const Staff = (props) => {
     const [modalIsOpen, setModalIsOpen] = useState(false);
 
 
@@ -13,7 +14,7 @@ const Staff = (slide) => {
  
         <div className="items-center text-center">  
         
-            <h1 className="text-white text-5xl text-center mb-4 font-serif">{slide.name}</h1>
+            {/* <h1 className="text-white text-5xl text-center mb-4 font-serif">{props.name}</h1> */}
 
           
             {SliderData.map((slide) => {
@@ -40,11 +41,11 @@ const Staff = (slide) => {
             })}
             <ReactModal isOpen={modalIsOpen}>
                             <div className="bg-white">
-                            <h1>{slide.name}</h1>
-                            <p>yo-yo</p>
-                            <div>
-                                <button onClick={() => setModalIsOpen(false)} className="bg-green-400 p-2">Close Modal</button>
-                            </div>
+                                <h1>{props.name}</h1>
+                                <p>{props.name}</p>
+                                <div>
+                                    <button onClick={() => setModalIsOpen(false)} className="bg-green-400 p-2">Close Modal</button>
+                                </div>
                             </div>
                         </ReactModal>
         </div> 

@@ -3,14 +3,14 @@ export const SliderData = [
     id: 0,
     image: "./photos/Charlie.jpg",
     name: "Charlie Lowe",
-    bio: "",
+    bio: "Charlie is a snare god",
     role: "Snare Tech",
   },
   {
     id: 1,
     image: "./photos/Nick.jpg",
     name: "Nick McConnaughey",
-    bio: "",
+    bio: "Nick likes Philly Cheesesteaks",
     role: "Front Ensemble Coordinator",
   },
   {
