@@ -1,6 +1,6 @@
 import logo from '../assets/NFM-Logo.png';
 import {Link} from "react-router-dom";
-
+import "./hamburger.css";
 //add comment here
 
 function Header(props) {
@@ -9,7 +9,7 @@ function Header(props) {
         <nav className="bg-black flex py-3 justify-between sticky top-0">            
         
         {/* left side  */}
-          <div> 
+            <div className="hidden md:block"> 
                 <div className="  inline-grid" >
                     <Link to="/">
                     <h1 className="cursor-pointer hover:text-red-500 text-white ml-7 mt-10 text-xl font-serif">Home</h1>
@@ -29,7 +29,7 @@ function Header(props) {
            </div>
 
         {/* right side  */}
-              <div className=" "> 
+            <div className="hidden md:block"> 
                 <div className="  inline-grid justify-center mr-7 mt-10" >
                     <Link to="/contact">
                     <h1 className="text-white cursor-pointer hover:text-red-500 text-xl font-serif">Contact</h1>
@@ -43,10 +43,12 @@ function Header(props) {
                 
             </div>
             
-
+        <div className="md:hidden hamburger my-auto mr-5">
+           
+        </div>
         </nav>
                 
-
+       
 </div>
     )
 }
