@@ -2,22 +2,10 @@ import React, {useState} from 'react'
 import ReactModal from 'react-modal';
 import {SliderData} from "./SliderData";
 
-// import "./card.css";
-
-//Card + Modal and all data associated with it
 function Card({ name, role, bio, image }) {
 
   const [modalIsOpen, setModalIsOpen] = useState(false);
-//   const customStyles = {
-//   content: {
-//     top: '50%',
-//     left: '50%',
-//     right: 'auto',
-//     bottom: 'auto',
-//     marginRight: '-50%',
-//     transform: 'translate(-50%, -50%)',
-//   },
-// };  
+
   return (
     <div className="justify-center transform transition duration-500 ease-in-out hover:scale-105 cursor-pointer flex-wrap max-w-sm rounded overflow-hidden m-4 items-center bg-white inline-block">
       <div onClick={() => setModalIsOpen(true)}>
@@ -46,7 +34,7 @@ function Card({ name, role, bio, image }) {
 
 
 
-//Our main Export Rendering each card 
+//Main Export Rendering each card 
 
 const Staff = (props) => {
     
@@ -67,4 +55,3 @@ const Staff = (props) => {
 export default Staff
 
 
-// className="card justify-center transform transition duration-500 ease-in-out hover:scale-105 cursor-pointer flex-wrap max-w-sm rounded overflow-hidden ml-4 bg-white inline-block"
