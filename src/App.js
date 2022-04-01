@@ -8,7 +8,6 @@ import Staff from "./components/Staff";
 import Contact from "./components/Contact";
 import History from "./components/History";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
 
