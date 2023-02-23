@@ -9,12 +9,12 @@ function Card({ name, role, bio, image }) {
   return (
     <div className="justify-center transform transition duration-500 ease-in-out hover:scale-105 cursor-pointer flex-wrap max-w-sm rounded overflow-hidden m-4 items-center bg-white inline-block">
       <div onClick={() => setModalIsOpen(true)}>
-      <img className="max-w-sm" src={image} alt="Staff member" />
-                        <div class="px-6 py-4 bg-white">
-                            <div class="font-bold text-xl mb-2 mx-auto bg-white text-center">{name}</div>
-                                <hr className="hr-black"/>
-                                <p class="text-gray-700 text-base bg-white text-center">{role}</p>
-                        </div>
+        <img className="max-w-sm" src={image} alt="Staff member" />
+        <div class="px-6 py-4 bg-white">
+            <div class="font-bold text-xl mb-2 mx-auto bg-white text-center">{name}</div>
+                <hr className="hr-black"/>
+                <p class="text-gray-700 text-base bg-white text-center">{role}</p>
+        </div>
       </div>
       <ReactModal isOpen={modalIsOpen}>
         <div className="bg-white ">
